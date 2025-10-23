@@ -1,0 +1,56 @@
+ .thumbnailImage {
+   position: relative;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   color: #808080;
+   /* Initial gray color */
+   transition: color 0.3s ease;
+   /* Smooth color transition on hover */
+   border-radius: 4px;
+ }
+
+ .thumbnailImage img {
+   height: auto;
+   height: inherit;
+   /* Adjust the size of the icon as needed */
+   width: 100%;
+   padding: 8px;
+   border-radius: 4px;
+   object-fit: contain;
+   background-color: #F3F4F9;
+ }
+
+ .thumbnailImage:hover .thumbnailHover {
+  height: 100%;
+   background-color: #000000;
+   /* Change to yellow/golden color on hover */
+   opacity: 0.4;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .thumbnailHover {
+   height: inherit;
+   width: 100%;
+   opacity: 0;
+   background-color: #f3f4f9;
+   position: absolute;
+   display: none;
+   z-index: 99;
+   left: 50%;
+   -webkit-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   transform: translateX(-50%);
+   border-radius: 4px;
+ }
+
+ .thumbnailHoverImg{
+   position: absolute;
+ 
+   opacity: 1!important;
+   background-color: #000000!important;
+   height: 48px!important;
+   width: 48px!important;
+ }

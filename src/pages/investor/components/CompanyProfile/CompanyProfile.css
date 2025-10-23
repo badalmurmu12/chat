@@ -1,0 +1,58 @@
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.progress-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: calc(50% + 25px);;
+  width: calc(100% - 50px);
+  height: 2px;
+  background-color: #ccc;
+}
+
+.completed::after {
+  background-color: green;
+}
+
+.in-progress::after {
+  background-color: #ccc;
+}
+
+.step-number {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.completed .step-number {
+  background-color: #008080;
+}
+
+.in-progress .step-number {
+  background-color: #ccc;
+}
+
+.step-label {
+  margin-top: 10px;
+  text-align: center;
+}
