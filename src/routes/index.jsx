@@ -21,9 +21,9 @@ function ProtectedRoute({ children }) {
   const userdata = useSelector((state) => state.auth);
   const location = useLocation();
 
-  if (userdata.loggedIn) {
-    return <Navigate to={`/login?redirect=${encodeURIComponent(location.pathname)}`} replace />;
-  }
+  // if (userdata.loggedIn) {
+  //   return <Navigate to={`/login?redirect=${encodeURIComponent(location.pathname)}`} replace />;
+  // }
 
   return children;
 }

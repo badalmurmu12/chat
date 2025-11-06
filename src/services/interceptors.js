@@ -32,7 +32,7 @@ export const refreshtoken = async () => {
     store.dispatch(logoutSuccess());
     const currentPath = window.location.pathname;
     const encodedPath = encodeURIComponent(currentPath);
-    window.location.href = `/login?redirect=${encodedPath}`;
+    // window.location.href = `/login?redirect=${encodedPath}`;
   }
   let token = await refreshToken(rfsToken);
   console.log('refreshToken', token);
